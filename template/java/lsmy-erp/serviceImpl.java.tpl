@@ -33,6 +33,7 @@ public class {{U(data.table)}}ServiceImpl implements {{U(data.table)}}Service
      * @return
      * @lastModifier
      */
+    @Override
     public PageResult list({{U(data.table)}}SearchVO svo) throws CloudBaseRuntimeException{
         PageResult result = new PageResult();
         Page page = new Page(svo.getPage_no(),svo.getPage_size());
@@ -54,6 +55,7 @@ public class {{U(data.table)}}ServiceImpl implements {{U(data.table)}}Service
      * @return
      * @lastModifier
      */
+    @Override
     public {{U(data.table)}}VO get({{data.priField.JavaType.type}} {{data.priField.Field}}) throws CloudBaseRuntimeException{
         {{U(data.table)}}VO vo = {{U(data.table)}}Helper.convertToVO({{H(data.table)}}MapperDao.get({{data.priField.Field}}));
 
@@ -66,6 +68,7 @@ public class {{U(data.table)}}ServiceImpl implements {{U(data.table)}}Service
      * @return
      * @lastModifier
      */
+    @Override
     public void insert({{U(data.table)}}VO vo) throws CloudBaseRuntimeException{
         {{U(data.table)}} po = {{U(data.table)}}Helper.convertToPO(vo);
         {{H(data.table)}}MapperDao.insert(po);
@@ -77,6 +80,7 @@ public class {{U(data.table)}}ServiceImpl implements {{U(data.table)}}Service
      * @return
      * @lastModifier
      */
+    @Override
     public void insertList(List<{{U(data.table)}}VO> list) throws CloudBaseRuntimeException{
         List<{{U(data.table)}}> listPO = {{U(data.table)}}Helper.convertToPO(list);
         {{H(data.table)}}MapperDao.insertList(listPO);
@@ -88,6 +92,7 @@ public class {{U(data.table)}}ServiceImpl implements {{U(data.table)}}Service
      * @return
      * @lastModifier
      */
+    @Override
     public void update({{U(data.table)}}VO vo) throws CloudBaseRuntimeException{
         {{U(data.table)}} po = {{U(data.table)}}Helper.convertToPO(vo);
 
@@ -100,6 +105,7 @@ public class {{U(data.table)}}ServiceImpl implements {{U(data.table)}}Service
      * @return
      * @lastModifier
      */
+    @Override
     public void updateList(List<{{U(data.table)}}VO> list) throws CloudBaseRuntimeException{
         List<{{U(data.table)}}> listPO = {{U(data.table)}}Helper.convertToPO(list);
 
@@ -112,6 +118,7 @@ public class {{U(data.table)}}ServiceImpl implements {{U(data.table)}}Service
      * @return
      * @lastModifier
      */
+    @Override
     public void delete({{data.priField.JavaType.type}} {{data.priField.Field}}) throws CloudBaseRuntimeException{
         {{H(data.table)}}MapperDao.delete({{data.priField.Field}});
     }
@@ -122,6 +129,7 @@ public class {{U(data.table)}}ServiceImpl implements {{U(data.table)}}Service
      * @return
      * @lastModifier
      */
+    @Override
     public void deleteList(List<{{data.priField.JavaType.type}}> list) throws CloudBaseRuntimeException{
         {{H(data.table)}}MapperDao.deleteList(list);
     }
