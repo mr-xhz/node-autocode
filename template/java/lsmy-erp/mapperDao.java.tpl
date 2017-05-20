@@ -22,12 +22,6 @@ public class {{U(data.table)}}MapperDao{
         return {{H(data.table)}}Mapper.selectByExample(example);
     }
 
-    public List<{{U(data.table)}}> listByPrimaryKey(List<{{data.priField.JavaType.type}}> list){
-    	  {{U(data.table)}}Example example = new {{U(data.table)}}Example();
-        example.createCriteria().and{{FU(data.priField.Field)}}In(list);
-        return {{U(data.table)}}Mapper.selectByExample(example);
-    }
-
     public int countByExample({{U(data.table)}}Example example){
         return {{H(data.table)}}Mapper.countByExample(example);
     }
