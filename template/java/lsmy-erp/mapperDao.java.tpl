@@ -6,13 +6,16 @@
 import java.util.List;
 import org.lsmy.cloud.{{ext.project}}.mapper.autocode.{{U(data.table)}}Mapper;
 import org.lsmy.cloud.{{ext.project}}.mapper.custom.{{U(data.table)}}CustomDao;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class {{U(data.table)}}MapperDao{
 
+    @Autowired
     private {{U(data.table)}}Mapper {{H(data.table)}}Mapper;
 
+    @Autowired
     private {{U(data.table)}}CustomDao {{H(data.table)}}CustomDao;
 
     public List<{{U(data.table)}}> selectByExample({{U(data.table)}}Example example){
