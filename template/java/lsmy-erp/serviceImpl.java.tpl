@@ -19,7 +19,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service
+@Service("{{H(data.table)}}Service")
 public class {{U(data.table)}}ServiceImpl implements {{U(data.table)}}Service
 {
     private static Logger logger = LoggerFactory.getLogger({{U(data.table)}}ServiceImpl.class);
