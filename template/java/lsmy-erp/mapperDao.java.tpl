@@ -3,11 +3,13 @@
 {{P(file).replace("package","import").replace("dao"+(ext.subProject?"."+ext.subProject:""),"po."+U(data.table)+"Example")}}
 {{P(file).replace("package","import").replace("dao"+(ext.subProject?"."+ext.subProject:""),"po."+U(data.table))}}
 
+import java.util.ArrayList;
 import java.util.List;
 import org.lsmy.cloud.{{ext.project}}.mapper.autocode.{{U(data.table)}}Mapper;
 import org.lsmy.cloud.{{ext.project}}.mapper.custom.{{U(data.table)}}CustomDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.util.CollectionUtils;
 
 @Component
 public class {{U(data.table)}}MapperDao{
@@ -22,6 +24,15 @@ public class {{U(data.table)}}MapperDao{
         return {{H(data.table)}}Mapper.selectByExample(example);
     }
 
+    public List<{{U(data.table)}}> listByPrimaryKey(List<{{data.priField.JavaType.type}}> list){
+        if(CollectionUtils.isEmpty(list)){
+          return new ArrayList<{{U(data.table)}}>();
+        }
+        {{U(data.table)}}Example example = new {{U(data.table)}}Example();
+        example.createCriteria().and{{FU(data.priField.Field)}}In(list);
+        return {{H(data.table)}}Mapper.selectByExample(example);
+    }
+
     public int countByExample({{U(data.table)}}Example example){
         return {{H(data.table)}}Mapper.countByExample(example);
     }
@@ -31,6 +42,9 @@ public class {{U(data.table)}}MapperDao{
     }
 
     public void insertList(List<{{U(data.table)}}> list){
+        if(CollectionUtils.isEmpty(list)){
+          return;
+        }
         {{H(data.table)}}CustomDao.insertList(list);
     }
 
@@ -39,6 +53,9 @@ public class {{U(data.table)}}MapperDao{
     }
 
     public void updateList(List<{{U(data.table)}}> list){
+        if(CollectionUtils.isEmpty(list)){
+          return;
+        }
         {{H(data.table)}}CustomDao.updateList(list);
     }
 
@@ -47,6 +64,9 @@ public class {{U(data.table)}}MapperDao{
     }
 
     public int deleteList(List<{{data.priField.JavaType.type}}> list){
+        if(CollectionUtils.isEmpty(list)){
+          return 0;
+        }
         {{U(data.table)}}Example example = new {{U(data.table)}}Example();
         example.createCriteria().and{{FU(data.priField.Field)}}In(list);
         return {{H(data.table)}}Mapper.deleteByExample(example);

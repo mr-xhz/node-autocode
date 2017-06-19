@@ -31,9 +31,11 @@ var tpl = {
       file:file,
       plan:plan
     };
+    file.path = template.compile(file.path)(renderData || {});
     if(!file.target){
       return "没有目标地址跳过"+file.path;
     }
+    file.target = template.compile(file.target)(renderData || {});
     var filePath = global.formatTplDir(file.path);
     var fileContent = fs.readFileSync(filePath,"utf-8");
     var targetContent = template.compile(fileContent)(renderData || {});

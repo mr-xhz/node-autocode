@@ -10,7 +10,7 @@ import org.lsmy.cloud.common.vo.PageResult;
 public interface {{U(data.table)}}Service
 {
     /**
-     * @Description 根据条件做搜索
+     * @description 根据条件做搜索
      * @param svo
      * @return
      * @lastModifier
@@ -19,7 +19,7 @@ public interface {{U(data.table)}}Service
 
 
     /**
-     * @Description 根据主键获取
+     * @description 根据主键获取
      * @param svo
      * @return
      * @lastModifier
@@ -27,7 +27,7 @@ public interface {{U(data.table)}}Service
     {{U(data.table)}}VO get({{data.priField.JavaType.type}} {{data.priField.Field}}) throws CloudBaseRuntimeException;
 
     /**
-     * @Description 插入
+     * @description 插入
      * @param vo
      * @return
      * @lastModifier
@@ -35,7 +35,7 @@ public interface {{U(data.table)}}Service
     void insert({{U(data.table)}}VO vo) throws CloudBaseRuntimeException;
 
     /**
-     * @Description 批量插入
+     * @description 批量插入
      * @param list
      * @return
      * @lastModifier
@@ -43,7 +43,7 @@ public interface {{U(data.table)}}Service
     void insertList(List<{{U(data.table)}}VO> list) throws CloudBaseRuntimeException;
 
     /**
-     * @Description 更新
+     * @description 更新
      * @param vo
      * @return
      * @lastModifier
@@ -51,7 +51,7 @@ public interface {{U(data.table)}}Service
     void update({{U(data.table)}}VO vo) throws CloudBaseRuntimeException;
 
     /**
-     * @Description 批量更新
+     * @description 批量更新
      * @param list
      * @return
      * @lastModifier
@@ -59,7 +59,7 @@ public interface {{U(data.table)}}Service
     void updateList(List<{{U(data.table)}}VO> list) throws CloudBaseRuntimeException;
 
     /**
-     * @Description 删除
+     * @description 删除
      * @param {{data.priField.Field}}
      * @return
      * @lastModifier
@@ -67,7 +67,7 @@ public interface {{U(data.table)}}Service
     void delete({{data.priField.JavaType.type}} {{data.priField.Field}}) throws CloudBaseRuntimeException;
 
     /**
-     * @Description 批量删除
+     * @description 批量删除
      * @param list
      * @return
      * @lastModifier

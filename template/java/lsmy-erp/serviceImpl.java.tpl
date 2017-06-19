@@ -28,7 +28,7 @@ public class {{U(data.table)}}ServiceImpl implements {{U(data.table)}}Service
     private {{U(data.table)}}MapperDao {{H(data.table)}}MapperDao;
 
     /**
-     * @Description 根据条件做搜索
+     * @description 根据条件做搜索
      * @param svo
      * @return
      * @lastModifier
@@ -39,6 +39,7 @@ public class {{U(data.table)}}ServiceImpl implements {{U(data.table)}}Service
         Page page = new Page(svo.getPage_no(),svo.getPage_size());
 
         {{U(data.table)}}Example example = new {{U(data.table)}}Example();
+        {{U(data.table)}}Example.Criteria criteria = example.createCriteria();
         example.setPage(page);
 
         List<{{U(data.table)}}VO> list = {{U(data.table)}}Helper.convertToVO({{H(data.table)}}MapperDao.selectByExample(example));
@@ -50,7 +51,7 @@ public class {{U(data.table)}}ServiceImpl implements {{U(data.table)}}Service
 
 
     /**
-     * @Description 根据主键获取
+     * @description 根据主键获取
      * @param svo
      * @return
      * @lastModifier
@@ -63,7 +64,7 @@ public class {{U(data.table)}}ServiceImpl implements {{U(data.table)}}Service
     }
 
     /**
-     * @Description 插入
+     * @description 插入
      * @param vo
      * @return
      * @lastModifier
@@ -75,7 +76,7 @@ public class {{U(data.table)}}ServiceImpl implements {{U(data.table)}}Service
     }
 
     /**
-     * @Description 批量插入
+     * @description 批量插入
      * @param list
      * @return
      * @lastModifier
@@ -87,7 +88,7 @@ public class {{U(data.table)}}ServiceImpl implements {{U(data.table)}}Service
     }
 
     /**
-     * @Description 更新
+     * @description 更新
      * @param vo
      * @return
      * @lastModifier
@@ -100,7 +101,7 @@ public class {{U(data.table)}}ServiceImpl implements {{U(data.table)}}Service
     }
 
     /**
-     * @Description 批量更新
+     * @description 批量更新
      * @param list
      * @return
      * @lastModifier
@@ -113,7 +114,7 @@ public class {{U(data.table)}}ServiceImpl implements {{U(data.table)}}Service
     }
 
     /**
-     * @Description 删除
+     * @description 删除
      * @param {{data.priField.Field}}
      * @return
      * @lastModifier
@@ -124,7 +125,7 @@ public class {{U(data.table)}}ServiceImpl implements {{U(data.table)}}Service
     }
 
     /**
-     * @Description 批量删除
+     * @description 批量删除
      * @param list
      * @return
      * @lastModifier
