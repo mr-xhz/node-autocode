@@ -3,6 +3,7 @@ package org.lsmy.cloud.common.sql.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.lsmy.cloud.common.sql.constant.SQLDict;
 import org.lsmy.cloud.common.sql.vo.FieldVO;
 
 public class {{U(data.table)}}SQLField{
@@ -11,7 +12,7 @@ public class {{U(data.table)}}SQLField{
 
 	static{
     {{each data.fields}}
-      	fields.add(new FieldVO("{{$value.Field}}", "{{$value.Comment}}", "{{$value.JavaType.type}}", "{{data.table}}", {{#($value.Default?'"'+$value.Default+'"':'""')}},null));
+      	fields.add(new FieldVO("{{$value.Field}}", "{{$value.Comment}}", SQLDict.Type.{{$value.JavaType.type}}, "{{data.table}}", "",null));
     {{/each}}
 	}
 }

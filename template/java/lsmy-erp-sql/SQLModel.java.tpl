@@ -3,6 +3,7 @@ package org.lsmy.cloud.common.sql.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.lsmy.cloud.common.sql.constant.SQLDict;
 import org.lsmy.cloud.common.sql.model.base.SQLBaseModel;
 import org.lsmy.cloud.common.sql.vo.FieldVO;
 
@@ -44,7 +45,7 @@ public class {{U(data.table)}}SQLModel extends SQLBaseModel {
   	 * @lastModifier
   	 */
   	@Override
-  	protected void comment(FieldVO vo){
+  	protected void handleField(FieldVO vo){
   		  switch(vo.getField()){
         {{each data.fields}}
         //{{$value.Comment}}
