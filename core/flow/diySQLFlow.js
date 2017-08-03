@@ -2,7 +2,7 @@ var type = {
   "^bigint":{
     JavaType:{
       package:"",
-      type:"Long"
+      type:"Number"
     },
     SqlType:"BIGINT"
   },
@@ -30,21 +30,21 @@ var type = {
   "^decimal":{
     JavaType:{
       package:"java.math.BigDecimal",
-      type:"BigDecimal"
+      type:"Number"
     },
     SqlType:"DECIMAL"
   },
   "^tinyint":{
     JavaType:{
       package:"",
-      type:"Byte"
+      type:"String"
     },
     SqlType:"TINYINT"
   },
   "^int":{
     JavaType:{
       package:"",
-      type:"Integer"
+      type:"Number"
     },
     SqlType:"INTEGER"
   },
@@ -73,9 +73,10 @@ function formatType(field){
 }
 
 module.exports = {
-  name:"数据库流程",
-  id:'databaseFlow',
+  name:"自定义SQL流程",
+  id:'diySQLFlow',
   handle(data){
+    console.log("xxxxxxxxxxxxxxxxxxxxx");
     if(data.fields && data.fields.length>0){
       data.fields.forEach(field =>{
         formatType(field);

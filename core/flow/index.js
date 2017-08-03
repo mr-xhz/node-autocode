@@ -1,12 +1,14 @@
 
 var defaultFlow = require('./defaultFlow'),
-    databaseFlow = require('./databaseFlow');
+    databaseFlow = require('./databaseFlow'),
+    diySQLFlow = require('./diySQLFlow');
 
 function Flow(){
   this.map = {};
   this.list = [
     defaultFlow,
-    databaseFlow
+    databaseFlow,
+    diySQLFlow
   ];
   this.list.forEach((item,index) => {
     this.map[item.id] = item;

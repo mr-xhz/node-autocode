@@ -9,7 +9,7 @@
 6 silly lifecycle autocode@1.0.0~prestart: no script for prestart, continuing
 7 info lifecycle autocode@1.0.0~start: autocode@1.0.0
 8 verbose lifecycle autocode@1.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle autocode@1.0.0~start: PATH: /home/xhz/services/node/lib/node_modules/npm/bin/node-gyp-bin:/home/xhz/code/node-autocode/node_modules/.bin:/home/xhz/services/apache-maven-3.3.9/bin:/home/xhz/services/jdk1.8.0/bin:/home/xhz/services/jdk1.8.0/jre/bin:/home/xhz/services/node/bin:/home/xhz/bin:/home/xhz/services/apache-maven-3.3.9/bin:/home/xhz/services/jdk1.8.0/bin:/home/xhz/services/jdk1.8.0/jre/bin:/home/xhz/services/node/bin:/home/xhz/bin:/home/xhz/services/apache-maven-3.3.9/bin:/home/xhz/services/jdk1.8.0/bin:/home/xhz/services/jdk1.8.0/jre/bin:/home/xhz/services/node/bin:/home/xhz/bin:/home/xhz/services/apache-maven-3.3.9/bin:/home/xhz/services/jdk1.8.0/bin:/home/xhz/services/jdk1.8.0/jre/bin:/home/xhz/services/node/bin:/home/xhz/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/snap/bin:/snap/bin
+9 verbose lifecycle autocode@1.0.0~start: PATH: /home/xhz/services/node/lib/node_modules/npm/bin/node-gyp-bin:/home/xhz/code/node-autocode/node_modules/.bin:/home/xhz/services/apache-maven-3.3.9/bin:/home/xhz/services/jdk1.8.0/bin:/home/xhz/services/jdk1.8.0/jre/bin:/home/xhz/services/node/bin:/home/xhz/bin:/home/xhz/services/apache-maven-3.3.9/bin:/home/xhz/services/jdk1.8.0/bin:/home/xhz/services/jdk1.8.0/jre/bin:/home/xhz/services/node/bin:/home/xhz/bin:/home/xhz/services/apache-maven-3.3.9/bin:/home/xhz/services/jdk1.8.0/bin:/home/xhz/services/jdk1.8.0/jre/bin:/home/xhz/services/node/bin:/home/xhz/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/snap/bin
 10 verbose lifecycle autocode@1.0.0~start: CWD: /home/xhz/code/node-autocode
 11 silly lifecycle autocode@1.0.0~start: Args: [ '-c', 'node bin/dev-server.js' ]
 12 silly lifecycle autocode@1.0.0~start: Returned: code: 1  signal: null
@@ -26,7 +26,7 @@
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
 15 verbose pkgid autocode@1.0.0
 16 verbose cwd /home/xhz/code/node-autocode
-17 error Linux 4.4.0-78-generic
+17 error Linux 4.4.0-83-generic
 18 error argv "/home/xhz/services/node/bin/node" "/home/xhz/services/node/bin/npm" "start"
 19 error node v6.9.1
 20 error npm  v3.10.8
