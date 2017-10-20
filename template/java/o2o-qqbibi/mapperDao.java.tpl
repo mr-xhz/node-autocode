@@ -3,7 +3,7 @@
 {{P(file).replace("package","import").replace(".dao",".model."+U(data.table)+"Example")}}
 {{P(file).replace("package","import").replace(".dao",".model."+U(data.table))}}
 {{P(file).replace("package","import").replace(".dao",".mapper.autocode."+U(data.table)+"Mapper")}}
-{{P(file).replace("package","import").replace(".dao",".mapper.custom."+U(data.table)+"CustomDao")}}
+{{P(file).replace("package","import").replace(".dao",".mapper.custom."+U(data.table)+"CustomMapper")}}
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +18,7 @@ public class {{U(data.table)}}MapperDao{
     private {{U(data.table)}}Mapper {{H(data.table)}}Mapper;
 
     @Autowired
-    private {{U(data.table)}}CustomDao {{H(data.table)}}CustomDao;
+    private {{U(data.table)}}CustomMapper {{H(data.table)}}CustomMapper;
 
     public List<{{U(data.table)}}> selectByExample({{U(data.table)}}Example example){
         return {{H(data.table)}}Mapper.selectByExample(example);
