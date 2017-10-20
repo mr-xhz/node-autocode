@@ -10,8 +10,14 @@ var helper = {
   FU(s){
     return s.replace(/^\w/ig,s[0].toUpperCase());
   },
+  FL(s){
+    return s.replace(/^\w/ig,s[0].toLowerCase());
+  },
   U(s){
     return this.FU(this.H(s));
+  },
+  L(s){
+    return this.FL(this.H(s));
   }
 };
 
@@ -19,8 +25,14 @@ module.exports = function(template){
   template.helper("U",function(s){
     return helper.U(s);
   });
+  template.helper("L",function(s){
+    return helper.L(s);
+  });
   template.helper("FU",function(s){
     return helper.FU(s);
+  });
+  template.helper("FL",function(s){
+    return helper.FL(s);
   });
   template.helper("H",function(s){
     return helper.H(s);
