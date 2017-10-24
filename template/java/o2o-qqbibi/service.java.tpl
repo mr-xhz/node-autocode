@@ -40,7 +40,7 @@ public interface {{U(data.table)}}Service
      * @return
      * @lastModifier
      */
-    void insertList(List<{{U(data.table)}}VO> list) throws CommonRuntimeException;
+    List<{{U(data.table)}}VO> insertList(List<{{U(data.table)}}VO> list) throws CommonRuntimeException;
 
     /**
      * @description 更新

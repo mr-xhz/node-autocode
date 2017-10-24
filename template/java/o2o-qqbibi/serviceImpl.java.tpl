@@ -85,9 +85,10 @@ public class {{U(data.table)}}ServiceImpl implements {{U(data.table)}}Service
      * @lastModifier
      */
     @Override
-    public void insertList(List<{{U(data.table)}}VO> list) throws CommonRuntimeException{
+    public List<{{U(data.table)}}VO> insertList(List<{{U(data.table)}}VO> list) throws CommonRuntimeException{
         List<{{U(data.table)}}> listModel = {{U(data.table)}}Helper.convertToModel(list);
         {{H(data.table)}}MapperDao.insertList(listModel);
+        return {{U(data.table)}}Helper.convertToVO(listModel);
     }
 
     /**
