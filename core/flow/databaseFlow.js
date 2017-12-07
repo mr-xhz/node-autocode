@@ -54,7 +54,14 @@ var type = {
       type:"String"
     },
     SqlType:"TEXT"
-  }
+  },
+  "^double":{
+    JavaType:{
+      package:"",
+      type:"Double"
+    },
+    SqlType:"DOUBLE"
+  },
 };
 
 function formatType(field){
